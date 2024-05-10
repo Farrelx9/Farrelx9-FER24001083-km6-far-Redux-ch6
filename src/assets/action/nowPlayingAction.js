@@ -1,9 +1,10 @@
 import axios from "axios";
 import { setNowPlaying } from "../reducers/nowPlayingReducer";
 
-const API_KEY = process?.env.API_KEY;
+
 
 export const getNowPlaying = () => async (dispatch) => {
+  const API_KEY = process?.env.API_KEY;
   try {
     if (!API_KEY) {
       throw new Error("API_KEY is not defined.");
