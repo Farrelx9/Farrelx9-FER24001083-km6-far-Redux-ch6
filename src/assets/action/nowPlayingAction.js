@@ -4,7 +4,7 @@ import { setNowPlaying } from "../reducers/nowPlayingReducer";
 
 
 export const getNowPlaying = () => async (dispatch) => {
-  const API_KEY = process?.env.API_KEY;
+  const API_KEY = process.env.API_KEY;
   try {
     if (!API_KEY) {
       throw new Error("API_KEY is not defined.");
